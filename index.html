@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day 7</title>
+    <link
+      rel="stylesheet"
+      href="./icofont.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div style="border: 2px solid rebeccapurple; text-align: center">
+      <p>Enter text:</p>
+      <input type="text" id="myChar" style="border: 7px solid purple" />
+    </div>
+
+    <div
+      style="border: 2px solid rebeccapurple; text-align: center; padding: 20px"
+    >
+      <button id="displayTime" onclick="Display()">Show Time</button>
+      <p>Time of the day :</p>
+      <span id="btnTime"></span>
+      <p>Press alt + w to stop the clock</p>
+      <p>
+        <b>
+          event listener on click doesn't override onClick function , it runs
+          before it
+        </b>
+      </p>
+    </div>
+
+    <form action="./submitMe.html" method="get" id="myForm">
+      <label for="userName">User Name</label>
+      <input
+        required
+        type="text"
+        id="userName"
+        name="userName"
+        placeholder="Enter Full Name"
+      />
+      <span id="validateUserName"></span>
+
+      <label for="passWord">Password</label>
+      <input
+        required
+        type="password"
+        id="passWord"
+        name="passWord"
+        placeholder="Enter password"
+      />
+      <span id="validateUserPass"></span>
+
+      <label for="passWord">Repeat Password</label>
+      <input
+        required
+        type="password"
+        id="rePassWord"
+        name="passWord"
+        placeholder="Enter password"
+      />
+      <span id="validateUserRePass"></span>
+
+      <label for="myEmail">Email</label>
+      <input type="email" id="myEmail" name="email" placeholder="Enter email" />
+      <span id="validateUserEmail"></span>
+      <label>I accept the terms and conditions </label>
+      <input type="radio" />
+
+      <div id="menus" style="border: none">
+        <div id="drop" style="height: fit-content; border: none">
+          <label style="border: none; display: inline" id="header">City</label>
+          <select id="dropDown" style="font-size: 15px; display: inline">
+            <option value="Cairo">Cairo</option>
+            <option value="Alex" selected="selected">Alex</option>
+            <option value="luxor">Luxor</option>
+          </select>
+        </div>
+      </div>
+      <input id="mySubmit" type="submit" />
+    </form>
+
+    <div style="text-align: center">
+      <p>click inside to expand and click outside to shrink</p>
+      <input type="text" id="play" />
+    </div>
+
+    <div id="gallery">
+      <p>focus in to fade and out to shine</p>
+      <div>
+        <img src="./images/features-02.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./images/features-03.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./images/features-02.jpg" alt="" />
+      </div>
+      <div>
+        <img src="./images/features-03.jpg" alt="" />
+      </div>
+    </div>
+
+    <div id="stars" style=" margin:50px auto; width: 300px; height: 100px">
+      <div style="box-shadow: none; border: 2px solid goldenrod; text-align: center;">
+      <i class="icofont-star "></i>
+      <i class="icofont-star "></i>
+      <i class="icofont-star "></i>
+      <i class="icofont-star "></i>
+      <i class="icofont-star"></i>
+      <i class="icofont-star "></i>
+      <i class="icofont-star"></i>
+    </div>
+      <p>test stars hover and click </p>
+    </div>
+
+    <div id="slider">
+      <span id="prev">Prev</span>
+      <span id="next">Next</span>
+      <p id="sliderDes"></p>
+    </div>
+
+    <script src="./be.js"></script>
+    <script src="forms.js"></script>
+  </body>
+</html>

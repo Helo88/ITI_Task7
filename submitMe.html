@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day 6</title>
+
+  </head> 
+  <body>
+      <style>
+          p{
+              font-weight: 800;
+              font-style: italic;
+              text-transform: capitalize;
+              color: firebrick;
+              font-size: 50px;
+          }
+      </style>
+<p id="io"></p>
+<script >
+    let submitUrl=new URL(document.location.href).searchParams
+    document.getElementById("io").innerText=`Thank you : ${submitUrl.get('userName')} from ${submitUrl.get('name')}`
+</script>
+  </body>
+</html>
