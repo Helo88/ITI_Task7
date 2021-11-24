@@ -86,29 +86,36 @@ let sliderDes =document.getElementById("sliderDes")
 let arrIndex=0;
 let slideShow;
 let slide=function(){
+  console.log("index window "+arrIndex)
   slider.style.backgroundImage=`url(${imgsUrl[arrIndex]})`
-
+  sliderDes.textContent=imgsDes[arrIndex]
+  sliderDes.style.display="none"
   if(arrIndex>=2 ) arrIndex=0
-  // else if(arrIndex==2) {--arrIndex}
   else{
     arrIndex++
   }
-  console.log("index window "+arrIndex)
+ 
   }
 
 nextBtn.addEventListener('click',function(e){
   clearInterval(slideShow)
-  slider.style.backgroundImage=`url(${imgsUrl[ arrIndex==2 ? 0 : ++arrIndex ]})`
-// sliderDes.textContent=imgsDes[arrIndex]
+  console.log("index of be  "+arrIndex)
+  slider.style.backgroundImage=`url(${imgsUrl[ arrIndex]})`
+  sliderDes.style.display="block"
+  sliderDes.textContent=imgsDes[arrIndex]
+
+if(arrIndex>=2) arrIndex=2
+else arrIndex++
 })
 prevBtn.addEventListener('click',function(e){
   clearInterval(slideShow)
-  slider.style.backgroundImage=`url(${imgsUrl[ arrIndex==0 ? 0 : --arrIndex ]})`
+  slider.style.backgroundImage=`url(${imgsUrl[ arrIndex ]})`
+  sliderDes.style.display="block"
+  sliderDes.textContent=imgsDes[arrIndex]
 
-
+  if (arrIndex <=0) arrIndex=0
+  else arrIndex--;
   })
-
-    // setInterval(slide,1000)
 
  window.addEventListener('load',()=>{
   slideShow=setInterval(slide,2000)
@@ -118,9 +125,7 @@ prevBtn.addEventListener('click',function(e){
 
    slider.addEventListener("mouseover",function(){
      clearInterval(slideShow)
-     let r=arrIndex ==0 ? 0 : arrIndex-1
-     console.log("myindex  "+r)
-     sliderDes.textContent=imgsDes[r]
+     sliderDes.style.display="block"
    })
 
    slider.addEventListener("mouseout",function(){
